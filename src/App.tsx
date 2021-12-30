@@ -1,13 +1,16 @@
+import { Route, Routes} from 'react-router-dom';
 import './App.css';
-import Concepts from './components/Concepts';
-import Concept from './models/concept';
+import ConceptDetail from './components/ConceptDetail';
+import Home from './components/Home';
 
-function App() {
-  const concepts = [new Concept('React'), new Concept('Compile')];
+const App = () => {
   return (
-    <div>
-      <Concepts concepts={concepts} />
-    </div>
+    <>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/concepts/:id" element={<ConceptDetail/>} />
+    </Routes>
+    </>
   );
 }
 
