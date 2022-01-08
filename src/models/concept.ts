@@ -1,5 +1,6 @@
 class Concept {
   id: string;
+
   text: string;
 
   constructor(text: string) {

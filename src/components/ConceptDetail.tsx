@@ -1,10 +1,6 @@
-import { FC } from 'react';
-const ConceptDetail: FC<any> = () => {
-  return (
-    <div>
-      Details
-    </div>
-  )
+import { FC } from "react";
+const ConceptDetail: FC = () => {
+  return <div>Details</div>;
 };
 
 export default ConceptDetail;
