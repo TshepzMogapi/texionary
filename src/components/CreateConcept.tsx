@@ -1,8 +1,10 @@
+import { Pane, TextInput } from "evergreen-ui";
+
 const CreateConcept = () => {
   return (
-    <div>
-      <input type="text" placeholder="Enter Concept" />
-    </div>
+    <Pane alignItems="center" padding="24px">
+      <TextInput placeholder="Enter concept title" />
+    </Pane>
   );
 };
 
