@@ -29,9 +29,30 @@ const SearchConcepts = () => {
         width="80vw"
         placeholder="Search for a concept"
       />
-      {data.map((dt, key) => {
-        return <div key={key}>{dt.title}</div>;
-      })}
+      <div
+        style={{
+          width: "80vw",
+          border: "1px solid gray",
+        }}
+      >
+        {data.map((dt, key) => {
+          return (
+            <div
+              style={{
+                border: "0px",
+                height: "40px",
+                margin: "8px",
+                padding: "8px",
+                fontSize: "24px",
+                fontFamily: "sans-serif",
+              }}
+              key={key}
+            >
+              {dt.title}
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };
