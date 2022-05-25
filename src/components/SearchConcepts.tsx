@@ -1,6 +1,6 @@
-import { SearchInput } from "evergreen-ui";
 import { useState, useEffect, ChangeEvent } from "react";
 import { default as mockData } from "../MOCK_DATA.json";
+import Input from "@mui/material/Input";
 
 const SearchConcepts = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -22,11 +22,10 @@ const SearchConcepts = () => {
 
   return (
     <>
-      <SearchInput
+      <Input
         onChange={(event: ChangeEvent<HTMLInputElement>) => {
           setSearchTerm(event.target.value);
         }}
-        width="80vw"
         placeholder="Search for a concept"
       />
       <div

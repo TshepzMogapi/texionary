@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
 import Concept from "../models/concept";
 import Concepts from "./Concepts";
-import { Button, Pane, majorScale } from "evergreen-ui";
 import SearchConcepts from "./SearchConcepts";
+import Button from "@mui/material/Button";
 
 const Home = () => {
   const concepts = [new Concept("React"), new Concept("Compile")];
 
   return (
     <>
-      <Pane alignItems="center" marginX={majorScale(2)} clearfix>
+      <div>
         <SearchConcepts />
-      </Pane>
-      <Pane display="flex">
+      </div>
+      <div>
         <Button>
           {" "}
           <Link to="/concepts/new">+ Explain Concept</Link>
         </Button>
-      </Pane>
+      </div>
       <div>
         <Concepts concepts={concepts} />
       </div>
